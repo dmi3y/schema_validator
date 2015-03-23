@@ -1,0 +1,22 @@
+{
+  "name": "schema_validator",
+  "version": "0.0.0",
+  "authors": [
+    "'dmi3y' <lapshukov@gmail.com>"
+  ],
+  "description": "json schema validator",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "fuse.js": "~1.2.0",
+    "json-tree-ts": "~0.0.1"
+  }
+}

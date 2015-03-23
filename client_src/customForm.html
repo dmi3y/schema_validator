@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Schema Validator - {{name}}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="/all.css">
+    </head>
+    <body>
+        <div class="wrapper">
+        	<h1>
+                <div>{{name}}</div>
+                <input class="fuzSearch" id="fuzSearch" />
+                <div id="schemasMenu" class="schemasMenu">
+                  <div><a href="/{{schemaName}}">{{schemaName}}</a></div>
+                </div>
+            </h1>
+            <div id="json" class="area">
+                <h2>JSON:</h2>
+                <label>banUnknownProperties: <input type="checkbox" id="banUnknownProperties" checked /></label>
+                <textarea placeholder="Json data"></textarea>
+            </div>
+            <div id="result" class="area">
+                <h2>Results:</h2>
+                <div id="mailResults" class="mailResults">
+                    <a href="mailto:{{mailto}}?subject={{subject}}&body={{body}}">
+                        Email results
+                    </a>
+                </div>
+                <textarea placeholder="Validation results" readonly="true"></textarea>
+            </div>
+            <div id="schema" class="area">
+                <h2>Schema:</h2>
+                <label>treeView: <input type="checkbox" id="treeViewSwitch" /></label>
+                <a class="f-rgt" href="http://xxxxxxx/json-schema-validator/tree/master#schemas-v3-vs-v4">
+                    why schema looks different? (v3 vs v4)
+                </a>
+                <div id="treeView" class="treeView"></div>
+                <textarea placeholder="Schema" readonly="true">{{schema}}</textarea>
+            </div>
+        </div>
+        <script src="/all.js"></script>
+        <script type="text/json" id="flist">{{flist}}</script>
+    </body>
+</html>
